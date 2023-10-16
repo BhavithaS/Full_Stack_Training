@@ -1,4 +1,4 @@
-package Assignments.Strings;
+package Strings;
 
 public class mylength {
     public static void main(String[] args) {

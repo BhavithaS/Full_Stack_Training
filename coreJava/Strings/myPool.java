@@ -1,4 +1,4 @@
-package Assignments.Strings;
+package Strings;
 
 public class myPool {
     public static void main(String[] args) {

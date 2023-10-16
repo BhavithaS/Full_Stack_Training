@@ -1,4 +1,4 @@
-package Assignments.ExceptionHandling;
+package ExceptionHandling;
 
 import java.util.Scanner;
 

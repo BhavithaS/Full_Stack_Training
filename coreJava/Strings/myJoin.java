@@ -1,4 +1,4 @@
-package Assignments.Strings;
+package Strings;
 
 public class myJoin {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package Assignments.ExceptionHandling;
+package ExceptionHandling;
 
 
 class IllegalBankTransactionException extends Exception{
