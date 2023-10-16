@@ -13,6 +13,8 @@ public class ex1 {
         // System.out.println(stringBuffer.toString());
 
 
+        // With StringBuilder
+
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("StringBuffer");
         stringBuilder.append("is a peer class of String");

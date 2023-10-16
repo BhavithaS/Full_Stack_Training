@@ -7,11 +7,16 @@ public class ex2 {
 
         int index = originalString.indexOf('_');
 
+        // With StringBuffer
+
         if(index != -1){
             StringBuffer res = new StringBuffer(originalString);
+            // replacing '_'with 'insert text' by using replace method
             res.replace(index, index+1, insertText);
             System.out.println(res.toString());
         }
+
+        // With StringBuilder
 
         // if (index != -1) {
         //     StringBuilder result = new StringBuilder(originalString);

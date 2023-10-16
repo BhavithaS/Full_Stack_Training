@@ -1,31 +1,30 @@
 package ExceptionHandling;
 
-import java.util.Scanner;
 
 public class ArithmeticProb2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         try {
-            System.out.print("Enter the first number: ");
-            double dividend = scanner.nextDouble();
+            
+            // calling divide method
+            int result = divide(45,0);
+            // error occurs if divisor is 0
+            System.out.println(result);
 
-            System.out.print("Enter the second number: ");
-            double divisor = scanner.nextDouble();
-
-            double result = divideNumbers(dividend, divisor);
-            System.out.println("Result of the division: " + result);
         } catch (ArithmeticException e) {
+            // this executes as Arithmetic Exception is thrown
+            System.out.println("Arithmetic Exception occured");
             throw new UnsupportedOperationException("Division by zero is not allowed.", e);
         } catch (Exception e) {
-            System.err.println("An error occurred: " + e.getMessage());
-        } finally {
-            scanner.close(); // Close the scanner in the finally block to skip error
+            System.out.println("An error occurred: " + e.getMessage());
+        } finally{
+            System.out.println("End of my code");
         }
     }
 
-    public static double divideNumbers(double dividend, double divisor) {
+    public static int divide(int dividend, int divisor) {
         if (divisor == 0) {
-            throw new ArithmeticException("Division by zero is not allowed.");
+            // throwing new exception
+            throw new ArithmeticException("Division by zero is not allowed from method");
         }
         return dividend / divisor;
     }

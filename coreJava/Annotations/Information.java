@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 @interface Info{
     String authorID() ;
     String author() default "";
-    String Superisor() default "";
+    String superisor() default "";
     String date();
     String time();
     int version();

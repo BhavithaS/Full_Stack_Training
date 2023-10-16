@@ -1,4 +1,4 @@
-package ExceptionHandling;
+
 import java.util.Scanner;
 
 @FunctionalInterface
@@ -15,6 +15,8 @@ public class ArithmeticProbs {
         double t = sc.nextDouble();
         System.out.println("Enter the rate of interest");
         double r = sc.nextDouble();
+
+        // calculating simple interest
         double res = (p*t*r)/100.0;
         
         /*SimpleInterest si = new SimpleInterest(){

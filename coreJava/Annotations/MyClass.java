@@ -8,20 +8,26 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 @interface Execute{
-    int Sequence() default 0;
+    int sequence() default 0;
 }
 
 public class MyClass {
-    @Execute(Sequence = 2)
+    @Execute(sequence = 2)
     public void myMethod1(){
 
     }
-    @Execute(Sequence = 1)
+    @Execute(sequence = 1)
     public void myMethod2(){
 
     }
-    @Execute(Sequence = 3)
+    @Execute(sequence = 3)
     public void myMethod3(){
+
+    }
+
+    public static void main(String[] args){
+        // Class<MyClass> mymeth = MyClass.class;
+        // LEARN HOW TO USE ANNOTATION FIELDS IN MAIN FUNCTION ????
 
     }
 }

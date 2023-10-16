@@ -1,6 +1,5 @@
 package ExceptionHandling;
 
-
 class IllegalBankTransactionException extends Exception{
     public IllegalBankTransactionException(String msg){
         super(msg);
@@ -13,12 +12,15 @@ class InsufficientBalanceException extends Exception {
 }
 
 class SavingAccount{
+    private int id;
     private int savings = 0;
-    public SavingAccount(int savings){
+    public SavingAccount(int id, int savings){
+        this.id = id;
         this.savings = savings;
     }
 
     public void getBalance(){
+        System.out.println("Your id is : " +id);
         System.out.println("The balance in your acc is :"+ savings);
     }
 
@@ -33,11 +35,17 @@ class SavingAccount{
         return savings;
     }
 
+    // public void deposit(int amount){
+    //     if(amount < 0){
+    //         throw new IllegalBankTransactionException("Amount must be positive");
+    //     }
+    // }
+
 }
 
 public class Bank {
     public static void main(String[] args){
-        SavingAccount savingAcc = new SavingAccount(2000);
+        SavingAccount savingAcc = new SavingAccount(1, 2000);
         try {
             savingAcc.getBalance();
             int amnt1 = savingAcc.withdraw(-450);
