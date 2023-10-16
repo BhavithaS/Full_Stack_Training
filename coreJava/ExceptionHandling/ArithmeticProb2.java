@@ -19,7 +19,7 @@ public class ArithmeticProb2 {
         } catch (Exception e) {
             System.err.println("An error occurred: " + e.getMessage());
         } finally {
-            scanner.close(); // Close the scanner in the finally block.
+            scanner.close(); // Close the scanner in the finally block to skip error
         }
     }
 
