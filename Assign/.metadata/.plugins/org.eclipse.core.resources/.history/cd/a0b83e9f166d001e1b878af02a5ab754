@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module Annotations {
-	requires java.base;
-}
