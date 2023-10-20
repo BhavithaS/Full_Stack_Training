@@ -1,0 +1,40 @@
+package example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Student {
+	    public static void main(String[] args) {
+	        Map<String, List<Integer>> studentScores = new HashMap<>();
+
+	        // Adding student names and scores
+	        studentScores.put("Ravi", new ArrayList<Integer>(Arrays.asList(56)));
+	        studentScores.put("Hari", new ArrayList<Integer>(Arrays.asList(99)));
+	        studentScores.put("Ravi", new ArrayList<Integer>(Arrays.asList(78)));  //duplicate
+	        studentScores.put("Kusuma", new ArrayList<Integer>(Arrays.asList(72)));
+	        studentScores.put("Hari", new ArrayList<Integer>(Arrays.asList(45)));  //duplicate
+	        
+	        
+	        // Retrieving scores for a student
+	        String studentName = "John";
+	        List<Integer> scores = studentScores.get(studentName);
+
+	        if (scores != null) {
+	            System.out.println("Scores for " + studentName + ": " + scores);
+	        } else {
+	            System.out.println("Student not found.");
+	        }
+	    }
+
+	    public static void addStudent(Map<String, List<Integer>> studentData, String name, int score) {
+	        studentData.computeIfAbsent(name, k -> new ArrayList<>()).add(score);
+	    }
+}
+
+
+    
+

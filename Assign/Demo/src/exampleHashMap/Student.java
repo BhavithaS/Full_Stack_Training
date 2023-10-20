@@ -1,0 +1,31 @@
+package exampleHashMap;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Student {
+
+		public static void main(String[] args) {
+	        Map<String, List<Integer>> studentScores = new HashMap<>();
+	        
+	        AddScores ad = new AddScores();
+
+	        
+	        ad.addScores(studentScores,"Ravi", 56);
+	        ad.addScores(studentScores,"Hari", 45);
+	        ad.addScores(studentScores,"Ravi", 78); // duplicate
+	        ad.addScores(studentScores,"Kusuma", 56);
+	        ad.addScores(studentScores,"Hari", 95);  // duplicate
+	        
+	        System.out.println(studentScores);
+//	        System.out.println(studentScores.g);
+	        
+	  
+
+	    }
+}
+
+
+    
+
